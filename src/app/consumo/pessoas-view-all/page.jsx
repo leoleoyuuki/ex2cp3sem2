@@ -20,11 +20,11 @@ export default async function EletroView() {
         <h1>Página das Pessoas</h1>
         
         <div className="card-eletro-view">
-            
+                
                 <ul>
                     {
                         items.map((item)=>(
-                            <Link href={`/dados/pessoas-view-by-id/${item.id}`}>
+                            <Link href={`/consumo/pessoas-view-by-id/${item.id}`}>
                                 <li key={item.id}>
                                     <p>{item.nome}</p>
                                     <p>{item.postalZip}</p>

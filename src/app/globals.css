@@ -13,8 +13,11 @@
     }
 
     .card-eletro-view{
-        @apply bg-slate-500 h-screen;
+        @apply bg-slate-500 h-screen ;
 
+        & table{
+            @apply border-collapse border-black;
+        }
         & ul{
             @apply flex flex-row flex-wrap justify-center gap-9;
         }
