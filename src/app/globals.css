@@ -13,10 +13,16 @@
     }
 
     .card-eletro-view{
-        @apply bg-slate-500;
+        @apply bg-slate-500 h-screen ;
 
+        & table{
+            @apply border-collapse border-black;
+        }
         & ul{
-            @apply flex flex-row flex-wrap justify-center;
+            @apply flex flex-row flex-wrap justify-center gap-9;
+        }
+        & li{
+            @apply bg-lime-950 w-auto p-5 text-center text-zinc-100 text-lg 
         }
     }
 }
