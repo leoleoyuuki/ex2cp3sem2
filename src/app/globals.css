@@ -24,5 +24,12 @@
         & li{
             @apply bg-lime-950 w-auto p-5 text-center text-zinc-100 text-lg 
         }
+        & .nome{
+            @apply text-green-600
+        }
+
+        & .icons{
+            @apply flex flex-row 
+        }
     }
 }
