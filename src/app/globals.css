@@ -13,7 +13,19 @@
     }
 
     .card-eletro-view{
-        
+
+
+        & table{
+            @apply border-collapse border-black border-2 h-auto;
+
+            & tr{
+                @apply border-collapse border-black border-2;
+
+                & th{
+                    @apply border-collapse border-black border-2;
+                }
+            }
+        }
         & ul{
             @apply flex flex-row flex-wrap justify-center gap-9 h-auto  bg-slate-500 py-10;
         }
@@ -21,7 +33,7 @@
             @apply bg-lime-950 w-auto p-5 text-center text-zinc-100 text-lg 
         }
         & .nome{
-            @apply text-green-600
+            @apply text-green-600 border-none;
         }
 
         & .icons{

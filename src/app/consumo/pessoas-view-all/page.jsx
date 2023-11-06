@@ -17,35 +17,40 @@ export default async function EletroView() {
     }
 
     return (
-        <div>
+        <div className="h-auto overflow-scroll p-10">
             <h1>Página das Pessoas</h1>
 
             <div className="card-eletro-view">
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>PostalZip</th>
+                        <th>Country</th>
+                        <th>Id</th>
+                        <th>Botoes</th>
+                    </tr>
+                        {
+                            items.map((item) => (
 
-                <ul>
-                    {
-                        items.map((item) => (
+                                <tr key={item.id}>
+                                    <Link href={`/consumo/pessoas-view-by-id/${item.id}`}>
+                                        <th className="nome">{item.nome}</th>
+                                    </Link>
+                                    <th>{item.postalZip}</th>
+                                    <th>{item.country}</th>
+                                    <th>{item.id}</th>
+                                    <th className="icons flex justify-center border-none">
+                                        <Link href="/"><AiFillHome /></Link>
+                                        <Link href="https://github.com/"><AiFillGithub /></Link>
 
-                            <li key={item.id}>
-                                <Link href={`/consumo/pessoas-view-by-id/${item.id}`}>
-                                    <p className="nome">{item.nome}</p>
-                                </Link>
-                                <p>{item.postalZip}</p>
-                                <p>{item.country}</p>
-                                <div className="icons">
-                                    <Link href="/"><AiFillHome /></Link>
-                                    <Link href="https://github.com/"><AiFillGithub /></Link>
-
-                                </div>
-                            </li>
+                                    </th>
+                                </tr>
 
 
-                        ))
+                            ))
 
-                    }
-
-                </ul>
-
+                        }
+                </table>
             </div>
 
         </div>
